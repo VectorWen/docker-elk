@@ -16,7 +16,7 @@ services:
     cpu_shares: 512
     # 100% CPU
     cpu_period: 100000
-    cpu_quota: 100000
+    cpu_quota: 200000
     ports:
       - "9200:9200"
       - "9300:9300"
