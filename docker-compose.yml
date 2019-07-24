@@ -13,7 +13,7 @@ services:
     mem_limit: 1024M
     memswap_limit: 1024M
     # CPU 利用率权重,默认为 1024，
-    cpu_shares: 512
+    cpu_shares: 1024
     # 100% CPU
     cpu_period: 100000
     cpu_quota: 200000
