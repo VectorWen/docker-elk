@@ -15,7 +15,7 @@ discovery.type: single-node
 #
 # basic 基本授权
 # trial 试用授权
-xpack.license.self_generated.type: trial
+xpack.license.self_generated.type: basic
 # 使能使用密码
 xpack.security.enabled: true
 xpack.monitoring.collection.enabled: true
