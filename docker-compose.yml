@@ -15,7 +15,7 @@ services:
       - "9300:9300"
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      ELASTIC_PASSWORD: changeme
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
     networks:
       - elk
 
@@ -41,7 +41,7 @@ services:
     volumes:
       - ./filebeat/config/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml:ro
       - ${LOGS_DIR}:/filebeat/logs
-    command: filebeat -e -strict.perms=false -E output.elasticsearch.hosts=["elasticsearch:9200"]
+    command: filebeat -e -strict.perms=false -E output.elasticsearch.hosts=["elasticsearch:9200"] -E output.elasticsearch.password=${ELASTIC_PASSWORD}
     networks:
       - elk
     depends_on:
